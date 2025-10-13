@@ -1,0 +1,73 @@
+:root {
+  --w: 960px;
+  --lh: 1.6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font: 16px/var(--lh) system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: #111;
+  background: #fff;
+}
+
+.container {
+  max-width: var(--w);
+  margin: 0 auto;
+  padding: 24px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 24px 0 8px;
+}
+
+h1 .sub {
+  font-weight: 500;
+  color: #444;
+}
+
+h2 {
+  margin: 40px 0 12px;
+}
+
+.authors,
+.links {
+  margin: 8px 0;
+  color: #444;
+}
+
+.links a {
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.teaser,
+.figure {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin: 12px 0;
+}
+
+.caption {
+  font-size: 0.95rem;
+  color: #666;
+  margin-top: -4px;
+}
+
+pre {
+  background: #f6f6f6;
+  padding: 12px;
+  overflow: auto;
+  border-radius: 6px;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+}
