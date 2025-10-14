@@ -3,20 +3,20 @@
 
 <head>
   <meta charset="utf-8">
-  <title>LORAVERSE — Do-It-Yourself Research Project Page</title>
+  <title>LoRAverse</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Social preview (nice link cards) -->
-  <meta property="og:title" content="LORAVERSE">
-  <meta property="og:description" content="Short one-line summary of your method.">
+  <meta property="og:title" content="LoRAverse">
+  <meta property="og:description" content="A Submodular Framework to Retrieve Diverse Adapters for Diffusion Models">
   <meta property="og:image" content="images/teaser.jpg">
   <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
   <header class="container">
-    <h1>LORAVERSE: <span class="sub">Learning XYZ from ABC</span></h1>
+    <h1>LoRAverse: <span class="sub">Learning XYZ from ABC</span></h1>
     <p class="authors">
-      Mert Sönmezer · Co-author 1 · Co-author 2
+      Mert Sonmezer · Matthew Zheng · Pinar Yanardag
     </p>
     <p class="links">
       <a href="#abstract">Abstract</a> ·
@@ -24,17 +24,24 @@
       <a href="#results">Results</a> ·
       <a href="#bibtex">BibTeX</a> ·
       <a href="https://arxiv.org/abs/xxxx.xxxxx">Paper</a> ·
-      <a href="https://github.com/yourname/loraverse">Code</a> ·
-      <a href="https://huggingface.co/spaces/yourspace">Demo</a>
+      <a href="https://github.com/mertsonmezer/loraverse">Code</a> ·
     </p>
     <img class="teaser" src="images/teaser.jpg" alt="Teaser figure">
-    <p class="caption">One short teaser caption like DIY-SC’s teaser line.</p>
+    <p class="caption">One short teaser caption like DIY-SC's teaser line.</p>
   </header>
 
   <main class="container">
     <section id="abstract">
       <h2>Abstract</h2>
-      <p>Write a concise abstract (5–8 sentences).</p>
+      <p>Low-rank Adaptation (LoRA) models have revolutionized the personalization of pre-trained diffusion models by enabling
+      fine-tuning through low-rank, factorized weight matrices specifically optimized for attention layers. These models
+      facilitate the generation of highly customized content across a variety of objects, individuals, and artistic styles
+      without the need for extensive retraining. Despite the availability of over 100K LoRA adapters on platforms like
+      Civit.ai, users often face challenges in navigating, selecting, and effectively utilizing the most suitable adapters due
+      to their sheer volume, diversity, and lack of structured organization. This paper addresses the problem of selecting the
+      most relevant and diverse LoRA models from this vast database by framing the task as a combinatorial optimization
+      problem and proposing a novel submodular framework. Our quantitative and qualitative experiments demonstrate that our
+      method generates diverse outputs across a wide range of domains.</p>
     </section>
 
     <section id="method">
