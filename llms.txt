@@ -1,0 +1,29 @@
+# LoRAverse
+
+> LoRAverse: A Submodular Framework to Retrieve Diverse Adapters for Diffusion Models
+
+LoRAverse is a research project accepted at ICCV 2025 that addresses the problem of
+selecting relevant and diverse LoRA adapters from large-scale repositories (100K+ models)
+for diffusion model personalization. It frames adapter selection as a combinatorial
+optimization problem and proposes a submodular retrieval framework.
+
+## Authors
+
+- Mert Sonmezer (Middle East Technical University)
+- Matthew Zheng (Virginia Tech)
+- Pinar Yanardag (Virginia Tech)
+
+## Resources
+
+- Project page: https://loraverse-vt.github.io/
+- Paper (PDF): https://arxiv.org/pdf/2510.15022
+- arXiv abstract: https://arxiv.org/abs/2510.15022
+- Code: https://github.com/mertsonmezer/LoRAverse
+
+## Key Concepts
+
+- LoRA (Low-rank Adaptation) adapters for diffusion models
+- Submodular optimization for diverse subset selection
+- Concept extraction and semantic clustering
+- Safety-aware adapter filtering
+- Evaluated on diversity metrics vs. Stylus and SD v1.5 baselines
