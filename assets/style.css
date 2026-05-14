@@ -247,7 +247,8 @@ body {
 /* Figure variants */
 .figure.quantitative {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .figure.quantitative .quantitative-img {
