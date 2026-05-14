@@ -4,13 +4,38 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>LoRAverse</title>
+  <title>LoRAverse: Diverse LoRA Adapter Retrieval via Submodular Optimization | ICCV 2025</title>
 
-  <!-- Meta Tags for SEO and Social Sharing -->
-  <meta name="description" content="LoRAverse: A Submodular Framework to Retrieve Diverse Adapters for Diffusion Models - ICCV 2025">
-  <meta property="og:title" content="LoRAverse">
-  <meta property="og:description" content="A Submodular Framework to Retrieve Diverse Adapters for Diffusion Models">
-  <meta property="og:image" content="images/teaser.jpg">
+  <!-- Canonical -->
+  <link rel="canonical" href="https://loraverse-vt.github.io/">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logos/iccv25-logo.png">
+
+  <!-- SEO Meta -->
+  <meta name="description" content="LoRAverse retrieves diverse LoRA adapters from 100K+ models using submodular optimization, improving image diversity for diffusion models. ICCV 2025.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://loraverse-vt.github.io/">
+  <meta property="og:site_name" content="LoRAverse">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="LoRAverse: Diverse LoRA Adapter Retrieval | ICCV 2025">
+  <meta property="og:description" content="LoRAverse selects diverse LoRA adapters from 100K+ models using submodular optimization, improving diffusion model image diversity. ICCV 2025.">
+  <meta property="og:image" content="https://loraverse-vt.github.io/images/teaser.jpg">
+  <meta property="og:image:width" content="1656">
+  <meta property="og:image:height" content="772">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="LoRAverse: Diverse LoRA Adapter Retrieval | ICCV 2025">
+  <meta name="twitter:description" content="Submodular framework for selecting diverse LoRA adapters from 100K+ models for diffusion model personalization.">
+  <meta name="twitter:image" content="https://loraverse-vt.github.io/images/teaser.jpg">
+
+  <!-- Preconnect for external resources -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
   <!-- External Stylesheets -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
@@ -19,6 +44,42 @@
 
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="assets/style.css">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "name": "LoRAverse: A Submodular Framework to Retrieve Diverse Adapters for Diffusion Models",
+    "headline": "LoRAverse: A Submodular Framework to Retrieve Diverse Adapters for Diffusion Models",
+    "description": "A submodular optimization framework for selecting diverse LoRA adapters from 100K+ models on platforms like Civit.ai for diffusion model personalization.",
+    "url": "https://loraverse-vt.github.io/",
+    "sameAs": "https://arxiv.org/abs/2510.15022",
+    "datePublished": "2025-10-01",
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Mert Sonmezer",
+        "affiliation": { "@type": "Organization", "name": "Middle East Technical University" }
+      },
+      {
+        "@type": "Person",
+        "name": "Matthew Zheng",
+        "affiliation": { "@type": "Organization", "name": "Virginia Tech" }
+      },
+      {
+        "@type": "Person",
+        "name": "Pinar Yanardag",
+        "affiliation": { "@type": "Organization", "name": "Virginia Tech" }
+      }
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "IEEE/CVF International Conference on Computer Vision"
+    },
+    "image": "https://loraverse-vt.github.io/images/teaser.jpg"
+  }
+  </script>
 </head>
 
 <body>
@@ -35,9 +96,9 @@
 
     <!-- Authors -->
     <div class="authors">
-      <a href="#" target="_blank">Mert Sonmezer</a><sup>1</sup>,
-      <a href="#" target="_blank">Matthew Zheng</a><sup>2</sup>,
-      <a href="#" target="_blank">Pinar Yanardag</a><sup>2</sup>
+      <a href="https://mertsonmezer.vercel.app/" target="_blank" rel="noopener noreferrer">Mert Sonmezer</a><sup>1</sup>,
+      <a href="https://arxiv.org/abs/2510.15022" target="_blank" rel="noopener noreferrer">Matthew Zheng</a><sup>2</sup>,
+      <a href="https://pinguar.org/" target="_blank" rel="noopener noreferrer">Pinar Yanardag</a><sup>2</sup>
     </div>
 
     <!-- Affiliations -->
@@ -68,23 +129,15 @@
     </div>
 
     <!-- Teaser Figure -->
-    <div class="teaser">
-      <table>
-        <tr>
-          <td>
-            <img src="images/teaser.jpg" alt="LoRAverse Overview - Submodular algorithm selecting diverse LoRA adapters">
-          </td>
-        </tr>
-        <tr>
-          <td class="caption">
-            LoRAverse enhances image diversity by employing a submodular algorithm to select a diverse and representative set of
-            LoRA adapters. This approach begins by clustering the adapters based on their semantic meanings. From these clusters,
-            the algorithm selects models that not only maximize diversity but also maintain strong alignment with the user-provided
-            prompt, ensuring both variety and relevance in the generated images.
-          </td>
-        </tr>
-      </table>
-    </div>
+    <figure class="teaser">
+      <img src="images/teaser.jpg" alt="LoRAverse Overview - Submodular algorithm selecting diverse LoRA adapters" width="1656" height="772">
+      <figcaption class="caption">
+        LoRAverse enhances image diversity by employing a submodular algorithm to select a diverse and representative set of
+        LoRA adapters. This approach begins by clustering the adapters based on their semantic meanings. From these clusters,
+        the algorithm selects models that not only maximize diversity but also maintain strong alignment with the user-provided
+        prompt, ensuring both variety and relevance in the generated images.
+      </figcaption>
+    </figure>
 
     <!-- Abstract Section -->
     <div class="section">
@@ -106,7 +159,7 @@
     <div class="section">
       <h2>Method</h2>
       <div class="figure method-figure">
-        <img src="images/architecture.jpg" alt="Architecture of LoRAverse showing concept extractor and submodular retriever">
+        <img src="images/architecture.jpg" alt="Architecture of LoRAverse showing concept extractor and submodular retriever" width="1681" height="719" loading="lazy">
         <p class="caption">
           <strong>Architecture of LoRAverse.</strong> LoRAverse composed of two main modules: concept extractor and submodular retriever. The
           concept extractor processes the user prompt to identify concepts (keywords). These concepts guide to the
@@ -121,7 +174,7 @@
     <div class="section">
       <h2>Quantitative Results</h2>
       <div class="figure quantitative plain">
-        <img src="images/quantitative_results.jpg" alt="Quantitative comparison showing diversity metrics" class="quantitative-img">
+        <img src="images/quantitative_results.jpg" alt="Quantitative comparison showing diversity metrics" class="quantitative-img" width="1211" height="515" loading="lazy">
         <p class="caption">
           <strong>Quantitative Comparison (CFG=7).</strong> LoRAverse enhances the diversity of image sets across various metrics while maintaining comparable text-image alignment.
           The user study reports which method produced preferred outputs (US-P) by participants, and average rating of
@@ -134,7 +187,7 @@
     <div class="section">
       <h2>Qualitative Results</h2>
       <div class="figure plain">
-        <img src="images/qualitative_results.jpg" alt="Qualitative comparison showing diverse image generation">
+        <img src="images/qualitative_results.jpg" alt="Qualitative comparison showing diverse image generation" width="1692" height="1769" loading="lazy">
         <p class="caption">
           <strong>Qualitative Comparison.</strong> LoRAverse demonstrates a higher diversity compared to image sets generated by Stylus and SD
           v1.5.
